@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=M+PLUS+Rounded+1c&display=swap');
+
+
+:root {
+  --foreground-rgb: 254, 254, 247;
+  /* --background-start-rgb: 214, 219, 0;
+  --background-end-rgb: 255, 255, 0; */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #fefef7;
+  }
+}
+
+body {
+  background-color: #fefef7;
+  color: #4c444d;
+  font-family: 'M PLUS 1p';
+  text-align: center;
+  margin: 0;
+}
