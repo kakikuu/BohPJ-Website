@@ -1,0 +1,35 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { Inter } from 'next/font/google'
+import { Works } from "@/types/works"
+const inter = Inter({ subsets: ['latin'] })
+
+
+type Props = {
+  works: Works[];
+}
+
+const Posts: React.FC<Props> = ({ works }) => {
+  return (
+    <div>
+      {/* <Navigation /> */}
+      <main>
+        <Image src="images/logo_color.png" alt="Nakanishi PJ" width={150} height={150} />
+        <h1>Works</h1>
+        <p>BohPJ</p>
+        <ul>
+          {blog.map((blog) => (
+            <li key={blog.id}>
+              <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            </li>
+          ))}
+        </ul>
+        <div>
+          <h2>Works</h2>
+          {/* microCMSからの情報が入力される */}
+        </div>
+      </main>
+      {/* <Footer /> */}
+    </div>
+  )
+}

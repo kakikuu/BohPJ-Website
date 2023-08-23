@@ -1,0 +1,67 @@
+.container {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width: 10%;
+  height: 3px;
+  background-color: #26d8e3;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.memberClass {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+.memberClass li {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.memberList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  justify-content: center;
+  padding: 50px 20%;
+}
+
+.memberLink {
+  color: #0066c0;
+}
+
+.classId {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .memberList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .memberList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

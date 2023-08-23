@@ -1,0 +1,50 @@
+.header {
+  text-align: center;
+  position: relative;
+}
+
+.headerImage {
+  width: 100%;
+  height: auto;
+}
+
+.headerTitleContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headerTitle {
+  font-size: 10rem;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  position: relative;
+}
+
+.headerTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 3px;
+  background-color: #0085ff;
+}
+
+.headerSubtitle {
+  font-size: 2rem;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 6rem;
+  }
+
+  .headerSubtitle {
+    font-size: 1.5rem;
+  }
+}

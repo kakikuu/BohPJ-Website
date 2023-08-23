@@ -1,0 +1,48 @@
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10%;
+}
+
+.memberImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.memberName {
+  color: white;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 5;
+  background-color: #616161;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .memberCard {
+    margin: 10px auto;
+    max-width: 150px;
+  }
+
+  .memberImage {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .memberName {
+    font-size: 14px;
+    height: 50px;
+    max-height: 50px;
+  }
+}

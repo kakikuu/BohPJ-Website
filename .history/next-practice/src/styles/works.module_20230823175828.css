@@ -1,0 +1,26 @@
+.pagetitle {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.pagetitle>h1 {
+    position: absolute;
+    top: 300px;
+    right: 60%;
+    color: blue;
+
+}
+
+/* DisplayContents.module.css */
+
+.WorkDisplay {
+    background-color: aqua;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.WorkImg {}
+
+.ContentsTitle {}

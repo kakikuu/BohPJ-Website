@@ -1,0 +1,20 @@
+.pagetitle {
+    text-align: center;
+    margin: 2rem 0;
+    background-image: url(../../public/images/WorkHeaderImage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* DisplayContents.module.css */
+
+.WorkDisplay {
+    background-color: aqua;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.WorkImg {}
+
+.ContentsTitle {}

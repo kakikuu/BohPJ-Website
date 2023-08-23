@@ -1,0 +1,18 @@
+.pagetitle {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* DisplayContents.module.css */
+
+.WorkDisplay {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+
+.Contents {
+    flex: 1;
+}

@@ -1,0 +1,22 @@
+.pagetitle {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* DisplayContents.module.css */
+
+.WorkDisplay {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.WorkImg {
+    width: 1000px;
+    /* 幅を均等に分配するための flex グロウ */
+}
+
+.Contents h2 {
+    flex: 1;
+    /* 幅を均等に分配するための flex グロウ */
+}
