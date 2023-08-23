@@ -1,21 +1,36 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import type { NextPage, GetStaticProps, InferGetStaticPropsType } from "next";
+import Head from "next/head";
+import styles from "@/styles/Home.module.css";
+import { buildClient, IPostFields } from "@/lib/contentful";
+import Link from "next/link";
+import { Entry, EntryCollection } from "contentful";
 
-import { Works } from "@/types/works";
-import { client } from "@/libs/client";
-import styles from '../styles/works.module.css';
-import Footer from '../components/footer';
-import Navbar from '../components/navigation';
+const client = buildClient();
 
-const DisplayContents: React.FC = () => {
-    return (
-        <main>
-            <Navbar></Navbar>
-            <div>
-                <h1>ホームだよーーーん</h1>
-            </div>
-            <Footer></Footer>
-        </main >
-    );
+export const getStaticProps: GetStaticProps = async () => {
+  const { items }: EntryCollection<IPostFields> = await client.getEntries({
+    content_type: "post",
+    order: "-sys.createdAt",
+  });
+  return {
+    props: { posts: items },
+  };
 };
-export default DisplayContents;
+
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Home: NextPage<Props> = ({ posts }) => {
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>BohPJ</title>
+      </Head>
+      <main className={styles.main}>
+        <div>
+            <h1>BohPJとは</h1>
+            <ul className={styles.flex}>
+                <li>aaa</li>
+                <li>bbb</li>
+            </ul>
+        </div>
+      </main>
