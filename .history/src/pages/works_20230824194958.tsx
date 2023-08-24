@@ -20,7 +20,7 @@ const DisplayContents: React.FC<Props> = ({ works }) => {
       <div>
         <div className={styles.pagetitle}>
           <p>Works</p>
-          <Image src="/images/background-works-header.png" alt="" width="1450" height="800" />
+          <Image src="/images/WorkHeaderImage.png" alt="" width="1450" height="800" />
         </div>
         <div className={styles.WorksContens}>
           <h2>Works</h2>
