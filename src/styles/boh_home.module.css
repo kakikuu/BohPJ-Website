@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
 }
@@ -47,11 +47,12 @@
 /* ２ページ目 */
 #section2 {
     background-color: #FFFFFF;
+    /* height: ; */
 }
 
 .About {
     text-align: center;
-    vertical-align : top;
+    vertical-align: top;
     line-height: 2.5;
     font-size: 72px;
     color: #000000;
@@ -69,13 +70,16 @@
 }
 
 .Introduction {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 53%;
     transform: translate(-15%, -40%);
     text-align: center;
     font-size: 26px;
-    color: #000000;
+    color: #000000; */
+    width: 60%;
+    margin: 2% auto;
+    font-size: 1.3rem;
 }
 
 /* ３ページ目 */
@@ -85,18 +89,27 @@
 
 .News {
     text-align: center;
-    vertical-align : top;
+    vertical-align: top;
     line-height: 2.5;
+    color: #FFFFFF;
     font-size: 72px;
+
 }
 
 .News::after {
     content: "";
     position: absolute;
-    bottom: 82%;
+    bottom: 80%;
     left: 50%;
     transform: translateX(-50%);
     width: 10%;
     height: 6px;
     background-color: #00ffff;
+}
+
+.NewsContents {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
 }
