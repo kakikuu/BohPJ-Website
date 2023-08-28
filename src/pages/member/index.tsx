@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 import Navigation from "../../components/navigation/";
@@ -9,6 +10,19 @@ import styles from "../../styles/member.module.css";
 
 export default function Members() {
   const memberYears = [1, 2, 3, 4];
+
+  // ダークモード無効化用のクラス名を定義
+  const disableDarkModeClass = "disable-dark-mode";
+
+  useEffect(() => {
+    // コンポーネントがマウントされたときにクラスを追加
+    document.documentElement.classList.add(disableDarkModeClass);
+
+    // コンポーネントがアンマウントされたときにクラスを削除
+    return () => {
+      document.documentElement.classList.remove(disableDarkModeClass);
+    };
+  }, []);
 
   return (
     <div>
