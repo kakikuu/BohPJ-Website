@@ -1,8 +1,14 @@
+import { News } from "@/types/news";
+import { client } from "@/libs/client";
 import styles from '../styles/boh_home.module.css'
 import Footer from '../components/footer';
 import Navbar from '../components/navigation';
 
-export default function about() {
+type Props = {
+  news: News[];
+}
+
+const DisplayContents: React.FC<Props> = ({ news }) => {
   return (
     <div className={styles.AllPage}>
       <Navbar></Navbar>
@@ -28,6 +34,14 @@ export default function about() {
           <div className={styles.image}></div>
           <div className={styles.Page3}>
             <h1 className={styles.News}>News</h1>
+            {news.map((news) => (
+              <div key={news.id} className={styles.WorkDisplay}>
+                <div className={styles.ContentsTitle}>
+                  <h2 className="ContentsTitle">{news.title}</h2>
+                  <p className="ContentsDescribe">{news.content}</p>
+                </div>
+              </div>
+            ))}
             <p className={styles.NewsContents}>準備中</p>
 
           </div>
@@ -37,3 +51,18 @@ export default function about() {
     </div>
   )
 }
+export default DisplayContents;
+
+// microCMSの情報を得る
+export const getStaticProps = async () => {
+  // この関数はビルド時に実行される
+  // clientを使って、MicroCMSのAPIにアクセスしている
+  // 取得したコンテンツをページコンポーネントにpropsとして取得したデータをworksプロパティとして返す
+  const data = await client.get({ endpoint: "news" });
+
+  return {
+    props: {
+      news: data.contents,
+    },
+  };
+};
