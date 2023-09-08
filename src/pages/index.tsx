@@ -4,11 +4,14 @@ import styles from '../styles/boh_home.module.css'
 import Footer from '../components/footer';
 import Navbar from '../components/navigation';
 
+
 type Props = {
   news: News[];
 }
 
-const DisplayContents: React.FC<Props> = ({ news }) => {
+
+const about: React.FC<Props> = ({ news }) => {
+
   return (
     <div className={styles.AllPage}>
       <Navbar></Navbar>
@@ -42,7 +45,8 @@ const DisplayContents: React.FC<Props> = ({ news }) => {
                 </div>
               </div>
             ))}
-            <p className={styles.NewsContents}>準備中</p>
+
+            {/* <p className={styles.NewsContents}>準備中</p> */}
 
           </div>
         </section>
@@ -51,7 +55,8 @@ const DisplayContents: React.FC<Props> = ({ news }) => {
     </div>
   )
 }
-export default DisplayContents;
+
+export default about;
 
 // microCMSの情報を得る
 export const getStaticProps = async () => {
@@ -65,4 +70,5 @@ export const getStaticProps = async () => {
       news: data.contents,
     },
   };
+
 };
