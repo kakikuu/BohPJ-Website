@@ -1,15 +1,17 @@
+import { News } from "@/types/news";
+import { client } from "@/libs/client";
 import styles from '../styles/boh_home.module.css'
 import Footer from '../components/footer';
 import Navbar from '../components/navigation';
 
-import { News } from "@/types/news";
-import { client } from "@/libs/client";
 
 type Props = {
   news: News[];
 }
 
+
 const about: React.FC<Props> = ({ news }) => {
+
   return (
     <div className={styles.AllPage}>
       <Navbar></Navbar>
@@ -35,7 +37,6 @@ const about: React.FC<Props> = ({ news }) => {
           <div className={styles.image}></div>
           <div className={styles.Page3}>
             <h1 className={styles.News}>News</h1>
-            {/* ここにmicroCMSの情報を記述する*/}
             {news.map((news) => (
               <div key={news.id} className={styles.WorkDisplay}>
                 <div className={styles.ContentsTitle}>
@@ -44,6 +45,7 @@ const about: React.FC<Props> = ({ news }) => {
                 </div>
               </div>
             ))}
+
             {/* <p className={styles.NewsContents}>準備中</p> */}
 
           </div>
@@ -53,7 +55,9 @@ const about: React.FC<Props> = ({ news }) => {
     </div>
   )
 }
+
 export default about;
+
 // microCMSの情報を得る
 export const getStaticProps = async () => {
   // この関数はビルド時に実行される
@@ -66,4 +70,5 @@ export const getStaticProps = async () => {
       news: data.contents,
     },
   };
+
 };
