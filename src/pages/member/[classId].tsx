@@ -16,8 +16,8 @@ export default function MemberDetail() {
   const { classId, scrollTo } = router.query;
 
   const filteredMembers = membersData.filter(
-    (member) => member.classId === classId
-  );
+    (member) => member.classId === Number(classId)
+  )
 
   useEffect(() => {
     const scrollToSection = () => {
@@ -76,7 +76,7 @@ export default function MemberDetail() {
 
       <div className={styles.memberList}>
         {filteredMembers.map((member) => (
-          <MemberCard key={member.classId} member={member} />
+          <MemberCard key={member.name} member={member} />
         ))}
       </div>
       <Footer />
