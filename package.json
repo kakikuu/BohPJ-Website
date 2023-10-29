@@ -14,12 +14,20 @@
     "@types/node": "20.3.0",
     "@types/react": "18.2.11",
     "@types/react-dom": "18.2.4",
+    "contentful": "^10.6.5",
+    "contentful-management": "^11.3.0",
+    "contentful-typescript-codegen": "^3.4.0",
+    "convertapi": "^1.13.0",
+    "convertapi-js": "^1.0.8",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
+    "fs": "^0.0.1-security",
     "microcms-js-sdk": "^2.5.0",
     "next": "13.4.5",
+    "pdfjs-dist": "^3.11.174",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-pdf": "^7.5.1",
     "typescript": "5.1.3"
   }
 }

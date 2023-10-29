@@ -1,0 +1,123 @@
+{
+    "sys": {
+        "type": "Array"
+    },
+    "total": 2,
+    "skip": 0,
+    "limit": 100,
+    "items": [
+        {
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "lzs9okm7hyle"
+                    }
+                },
+                "id": "works",
+                "type": "ContentType",
+                "createdAt": "2023-10-26T03:11:59.845Z",
+                "updatedAt": "2023-10-26T04:14:55.380Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 2
+            },
+            "displayField": "workstitle",
+            "name": "Works",
+            "description": "成果物についての記載",
+            "fields": [
+                {
+                    "id": "workstitle",
+                    "name": "成果物タイトル",
+                    "type": "Symbol",
+                    "localized": false,
+                    "required": true,
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "workoverview",
+                    "name": "概要",
+                    "type": "Text",
+                    "localized": false,
+                    "required": true,
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "slidedata",
+                    "name": "スライド",
+                    "type": "Array",
+                    "localized": false,
+                    "required": true,
+                    "disabled": false,
+                    "omitted": false,
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkMimetypeGroup": [
+                                    "presentation",
+                                    "pdfdocument"
+                                ]
+                            }
+                        ],
+                        "linkType": "Asset"
+                    }
+                }
+            ]
+        },
+        {
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "lzs9okm7hyle"
+                    }
+                },
+                "id": "news",
+                "type": "ContentType",
+                "createdAt": "2023-10-26T03:03:32.914Z",
+                "updatedAt": "2023-10-26T04:13:32.504Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 3
+            },
+            "displayField": "newstitle",
+            "name": "News",
+            "description": "bohのwebサイトに記載したい記事を入力する",
+            "fields": [
+                {
+                    "id": "newstitle",
+                    "name": "記事タイトル",
+                    "type": "Symbol",
+                    "localized": false,
+                    "required": true,
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "newsoverview",
+                    "name": "概要",
+                    "type": "Symbol",
+                    "localized": false,
+                    "required": true,
+                    "disabled": false,
+                    "omitted": false
+                }
+            ]
+        }
+    ]
+}

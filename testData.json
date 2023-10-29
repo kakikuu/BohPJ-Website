@@ -1,0 +1,224 @@
+{
+    "sys": {
+        "type": "Array"
+    },
+    "total": 3,
+    "skip": 0,
+    "limit": 100,
+    "items": [
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "lzs9okm7hyle"
+                    }
+                },
+                "id": "70V7lrO2zsDROZSLWz9RJy",
+                "type": "Entry",
+                "createdAt": "2023-10-27T02:27:14.342Z",
+                "updatedAt": "2023-10-27T02:27:14.342Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 1,
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "works"
+                    }
+                },
+                "locale": "en-US"
+            },
+            "fields": {
+                "workstitle": "テスト第二弾",
+                "workoverview": "スライドデータ取得テストですねこれは。",
+                "slidedata": [
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "4WXfWthA27qtj3dWKyCwDz"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "lzs9okm7hyle"
+                    }
+                },
+                "id": "4pEmHiASF59gGfD8Y1kXpa",
+                "type": "Entry",
+                "createdAt": "2023-10-26T03:17:16.950Z",
+                "updatedAt": "2023-10-26T03:17:16.950Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 1,
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "works"
+                    }
+                },
+                "locale": "en-US"
+            },
+            "fields": {
+                "workstitle": "てすとですこれも。",
+                "workoverview": "これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あります。これは、500文字あ",
+                "slidedata": [
+                    {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "3mLBpTI3gA7gA3N8LP3c80"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "lzs9okm7hyle"
+                    }
+                },
+                "id": "7uupKDT3SO3aQDbREFRY1q",
+                "type": "Entry",
+                "createdAt": "2023-10-26T03:13:37.541Z",
+                "updatedAt": "2023-10-26T03:13:37.541Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 1,
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "news"
+                    }
+                },
+                "locale": "en-US"
+            },
+            "fields": {
+                "newstitle": "テストですこれは。",
+                "newsoverview": "これもテストです。よろしくお願いしますうううう。こふぇふぃそあｄｊふぃあおｓｊふぃおじゃどいｆｊうぇおいｊふぃおあｗｊふぉいあｗｊふぉいあえｗだｆｓｄｊふぁｓｊｄｆヵｊｓｋｆｄこれは、100文字です。"
+            }
+        }
+    ],
+    "includes": {
+        "Asset": [
+            {
+                "metadata": {
+                    "tags": []
+                },
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "lzs9okm7hyle"
+                        }
+                    },
+                    "id": "3mLBpTI3gA7gA3N8LP3c80",
+                    "type": "Asset",
+                    "createdAt": "2023-10-26T03:17:10.608Z",
+                    "updatedAt": "2023-10-26T03:17:10.608Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "revision": 1,
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "title": "スライドのテストですねこれは。",
+                    "description": "ｓふぁｓｄｆだｓｆさふぁｓｆさｄｆ",
+                    "file": {
+                        "url": "//assets.ctfassets.net/lzs9okm7hyle/3mLBpTI3gA7gA3N8LP3c80/b29956c5f1e901419b139f18eeb63560/dicomo2023_____.pdf",
+                        "details": {
+                            "size": 5533194
+                        },
+                        "fileName": "dicomo2023_発表資料.pdf",
+                        "contentType": "application/pdf"
+                    }
+                }
+            },
+            {
+                "metadata": {
+                    "tags": []
+                },
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "lzs9okm7hyle"
+                        }
+                    },
+                    "id": "4WXfWthA27qtj3dWKyCwDz",
+                    "type": "Asset",
+                    "createdAt": "2023-10-27T02:26:48.276Z",
+                    "updatedAt": "2023-10-27T02:26:48.276Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "revision": 1,
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "title": "これは、発表時に使用したスライドです。",
+                    "description": "ですです。",
+                    "file": {
+                        "url": "//assets.ctfassets.net/lzs9okm7hyle/4WXfWthA27qtj3dWKyCwDz/fba181c4b4379922c30b7444b67ae0d6/____.pdf",
+                        "details": {
+                            "size": 4262663
+                        },
+                        "fileName": "最優秀賞.pdf",
+                        "contentType": "application/pdf"
+                    }
+                }
+            }
+        ]
+    }
+}
