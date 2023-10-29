@@ -3,10 +3,13 @@ import Footer from '../components/footer';
 import Navbar from '../components/navigation';
 import { fetchEntries } from '../libs/client_entries'
 import { News } from "@/types/news";
+import { client } from "@/libs/client_entries";
 
+type Props = {
+  news: News[];
+}
 
-
-const about: React.FC<Props> = ({ posts }) => {
+const about: React.FC<Props> = ({ news }) => {
   return (
     <div className={styles.AllPage}>
       <Navbar></Navbar>
@@ -33,11 +36,11 @@ const about: React.FC<Props> = ({ posts }) => {
           <div className={styles.Page3}>
             <h1 className={styles.News}>News</h1>
             {/* ここにmicroCMSの情報を記述する*/}
-            {posts.map((posts) => (
-              <div key={posts.id} className={styles.WorkDisplay}>
+            {news.map((news) => (
+              <div key={news.id} className={styles.WorkDisplay}>
                 <div className={styles.ContentsTitle}>
-                  <h2 className="ContentsTitle">{posts.newstitle}</h2>
-                  <p className="ContentsDescribe">{posts.newsoverview}</p>
+                  <h2 className="ContentsTitle">{news.title}</h2>
+                  <p className="ContentsDescribe">{news.content}</p>
                 </div>
               </div>
             ))}
@@ -51,31 +54,36 @@ const about: React.FC<Props> = ({ posts }) => {
   )
 }
 export default about;
-// // microCMSの情報を得る
-// export const getStaticProps = async () => {
-//   // この関数はビルド時に実行される
-//   // clientを使って、MicroCMSのAPIにアクセスしている
-//   // 取得したコンテンツをページコンポーネントにpropsとして取得したデータをworksプロパティとして返す
-//   const data = await client.get({ endpoint: "news" });
+// microCMSの情報を得る
+export const getStaticProps = async () => {
+  // この関数はビルド時に実行される
+  // clientを使って、MicroCMSのAPIにアクセスしている
+  // 取得したコンテンツをページコンポーネントにpropsとして取得したデータをworksプロパティとして返す
+  const data = await client.get({ endpoint: "news" });
 
-//   return {
-//     props: {
-//       news: data.contents,
-//     },
-//   };
-// };
+  return {
+    props: {
+      news: data.contents,
+    },
+  };
+};
 
 export async function getStaticProps() {
 
   const resEntries = await fetchEntries('news') // タイトルや概要を取得
+  const resAssets = await fetchAsset() //スライドのデータを取得
 
   const posts = await resEntries.map((p) => {
     return p.fields
   })
+  const assets = await resAssets.Asset.map((a) => {
+    return a.fields
+  })
 
   return {
     props: {
-      posts
-    }
+      posts,
+      assets
+    },
   }
 }

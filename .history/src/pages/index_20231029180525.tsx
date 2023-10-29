@@ -2,6 +2,7 @@ import styles from '../styles/boh_home.module.css'
 import Footer from '../components/footer';
 import Navbar from '../components/navigation';
 import { fetchEntries } from '../libs/client_entries'
+import { fetchEntries } from '../libs/client_entries'
 import { News } from "@/types/news";
 
 
@@ -36,8 +37,8 @@ const about: React.FC<Props> = ({ posts }) => {
             {posts.map((posts) => (
               <div key={posts.id} className={styles.WorkDisplay}>
                 <div className={styles.ContentsTitle}>
-                  <h2 className="ContentsTitle">{posts.newstitle}</h2>
-                  <p className="ContentsDescribe">{posts.newsoverview}</p>
+                  <h2 className="ContentsTitle">{posts.title}</h2>
+                  <p className="ContentsDescribe">{posts.content}</p>
                 </div>
               </div>
             ))}

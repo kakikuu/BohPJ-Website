@@ -2,6 +2,7 @@ import styles from '../styles/boh_home.module.css'
 import Footer from '../components/footer';
 import Navbar from '../components/navigation';
 import { fetchEntries } from '../libs/client_entries'
+import { fetchEntries } from '../libs/client_entries'
 import { News } from "@/types/news";
 
 

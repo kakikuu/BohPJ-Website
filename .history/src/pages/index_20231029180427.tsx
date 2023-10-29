@@ -2,11 +2,14 @@ import styles from '../styles/boh_home.module.css'
 import Footer from '../components/footer';
 import Navbar from '../components/navigation';
 import { fetchEntries } from '../libs/client_entries'
+import { fetchEntries } from '../libs/client_entries'
 import { News } from "@/types/news";
 
+type Props = {
+  news: News[];
+}
 
-
-const about: React.FC<Props> = ({ posts }) => {
+const about: React.FC<Props> = ({ news }) => {
   return (
     <div className={styles.AllPage}>
       <Navbar></Navbar>
@@ -33,11 +36,11 @@ const about: React.FC<Props> = ({ posts }) => {
           <div className={styles.Page3}>
             <h1 className={styles.News}>News</h1>
             {/* ここにmicroCMSの情報を記述する*/}
-            {posts.map((posts) => (
-              <div key={posts.id} className={styles.WorkDisplay}>
+            {news.map((news) => (
+              <div key={news.id} className={styles.WorkDisplay}>
                 <div className={styles.ContentsTitle}>
-                  <h2 className="ContentsTitle">{posts.newstitle}</h2>
-                  <p className="ContentsDescribe">{posts.newsoverview}</p>
+                  <h2 className="ContentsTitle">{news.title}</h2>
+                  <p className="ContentsDescribe">{news.content}</p>
                 </div>
               </div>
             ))}
