@@ -6,6 +6,8 @@ import { News } from "@/types/news";
 import Image from 'next/image'
 import img from "../../public/images/logo_BohPJ.png";
 
+
+
 const about: React.FC<Props> = ({ posts }) => {
   // postsの長さを確認する
   return (
