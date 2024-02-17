@@ -41,12 +41,6 @@ const membersData = [
   },
   {
     classId: 1,
-    name: "いおり",
-    image:
-      "https://lh3.googleusercontent.com/d/12XVeEttF3O60riNms4Dyj390BFqj9e38",
-  },
-  {
-    classId: 1,
     name: "みつき",
     image:
       "https://lh3.googleusercontent.com/d/1g3fLcgIkKrZEOLfys_BnfgQe9jsDFIe5",
@@ -74,18 +68,6 @@ const membersData = [
     name: "穴井克和",
     image:
       "https://lh3.googleusercontent.com/d/17n-lrdIqJJOROBnPVx4nkuPbtcpe88Nv",
-  },
-  {
-    classId: 1,
-    name: "平野寿一",
-    image:
-      "https://lh3.googleusercontent.com/d/1M8CHnKsYgjd8IJoaR5JrilDhI0PzRLMN",
-  },
-  {
-    classId: 1,
-    name: "高橋ひかり",
-    image:
-      "https://lh3.googleusercontent.com/d/1Sv3KBGCGo8F1MG8aWhP9FQ_EklhL8mXA",
   },
   {
     classId: 1,
