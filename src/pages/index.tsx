@@ -107,7 +107,7 @@ export default about;
 export async function getStaticProps() {
   const resEntries = await fetchEntries(); // タイトルや概要を取得
   const posts: NewsFields[] = await resEntries.map(
-    (p: ContentfulEntry): NewsFields => {
+    (p: NewsContentfulEntry): NewsFields => {
       return p.fields;
     }
   );
