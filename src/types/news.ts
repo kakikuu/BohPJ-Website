@@ -4,7 +4,6 @@ type News = {
   newsoverview: string;
 };
 
-// Postsの型を定義（Newsの配列）
 type Posts = News[];
 
 type NewsFields = {

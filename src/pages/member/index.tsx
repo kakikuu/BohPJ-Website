@@ -8,7 +8,12 @@ import Footer from "../../components/footer";
 
 import styles from "../../styles/member.module.css";
 
-export default function Members() {
+interface SectionProps {
+  title: string;
+  children: React.ReactNode; // Reactの子要素はReact.ReactNode型を使う
+}
+
+function Members() {
   const memberYears = [1, 2, 3, 4];
 
   // ダークモード無効化用のクラス名を定義
@@ -52,7 +57,7 @@ export default function Members() {
   );
 }
 
-function Section({ title, children }) {
+function Section({ title , children }: SectionProps) {
   return (
     <div className={styles.section}>
       <h2 className={styles.sectionTitle}>{title}</h2>
@@ -60,3 +65,5 @@ function Section({ title, children }) {
     </div>
   );
 }
+
+export default Members;

@@ -9,6 +9,19 @@ interface AboutProps {
   posts: Posts;
 }
 
+export async function getStaticProps() {
+  const resEntries = await fetchEntries(); // タイトルや概要を取得
+  const posts = await resEntries.map((p) => {
+    return p.fields;
+  });
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
 const about: React.FC<AboutProps> = ({ posts }) => {
   return (
     <div className={styles.home__allpage}>
@@ -104,17 +117,4 @@ const about: React.FC<AboutProps> = ({ posts }) => {
 };
 export default about;
 
-export async function getStaticProps() {
-  const resEntries = await fetchEntries(); // タイトルや概要を取得
-  const posts: NewsFields[] = await resEntries.map(
-    (p: NewsContentfulEntry): NewsFields => {
-      return p.fields;
-    }
-  );
 
-  return {
-    props: {
-      posts,
-    },
-  };
-}
