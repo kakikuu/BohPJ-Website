@@ -1,20 +1,18 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from './style.module.css';
+import Image from "next/image";
+import styles from "./style.module.css";
+import workHeaderImage from "/public/images/background-works-header.png";
 
-const WorksHeader: React.FC = () => {
-    return (
-        <div className={styles['works-header']}>
-            <p className={styles['works-header__title']}>Works</p>
-            <Image
-                src="/images/background-works-header.png"
-                alt=""
-                width="1450"
-                height="800"
-                className={styles['works-header__background-image']}
-            />
-        </div>
-    );
-}
+const WorksHeader: () => JSX.Element = () => {
+  return (
+    <div className={styles["works-header"]}>
+      <p className={styles["works-header__title"]}>Works</p>
+      <Image
+        src={workHeaderImage}
+        alt=""
+        className={styles["works-header__background-image"]}
+      />
+    </div>
+  );
+};
 
 export default WorksHeader;

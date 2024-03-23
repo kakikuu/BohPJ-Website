@@ -1,10 +1,12 @@
 import styles from "./header.module.css";
+import Image from "next/image";
+import hedderImage from "/public/images/background-member-header.png";
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <img
-        src="/images/background-member-header.png"
+      <Image
+        src={hedderImage}
         alt="header background"
         className={styles.headerImage}
       />

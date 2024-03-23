@@ -1,10 +1,5 @@
-import styles from './header.module.css'
+import styles from "./header.module.css";
 
-import Link from 'next/link'
-
-export default function Navbar() {
-    return (
-        <nav className={styles.nav}>
-        </nav>
-    )
+export default function Navbar(): JSX.Element {
+  return <nav className={styles.nav}></nav>;
 }

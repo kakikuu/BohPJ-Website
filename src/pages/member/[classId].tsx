@@ -11,13 +11,18 @@ import Footer from "../../components/footer/";
 
 import styles from "../../styles/memberDetail.module.css";
 
-export default function MemberDetail() {
+const MemberDetail: () => JSX.Element = () => {
   const router = useRouter();
-  const { classId, scrollTo } = router.query;
+  const classId =
+    typeof router.query.classId === "string" ? router.query.classId : undefined;
+  const scrollTo =
+    typeof router.query.scrollTo === "string"
+      ? router.query.scrollTo
+      : undefined;
 
   const filteredMembers = membersData.filter(
     (member) => member.classId === Number(classId)
-  )
+  );
 
   useEffect(() => {
     const scrollToSection = () => {
@@ -40,7 +45,7 @@ export default function MemberDetail() {
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [classId, scrollTo]);
+  }, [classId, scrollTo, router.events]);
 
   const renderMemberLinks = () => {
     return [1, 2, 3, 4].map((year) => (
@@ -82,4 +87,6 @@ export default function MemberDetail() {
       <Footer />
     </div>
   );
-}
+};
+
+export default MemberDetail;

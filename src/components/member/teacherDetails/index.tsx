@@ -1,13 +1,16 @@
 import styles from "./teacherDetails.module.css";
+import Image from "next/image";
+import nakanishiImage from "/public/images/nakanishi.jpg";
 
 function TeacherDetails() {
   return (
     <div className={styles.teacherDetails}>
       <div className={styles.teacherImageContainer}>
-        <img
-          src="/images/nakanishi.jpg"
+        <Image
+          src={nakanishiImage}
           className={styles.teacherImage}
           alt="Teacher"
+          height={300}
         />
         <div className={styles.teacherNameContainer}>
           <p className={styles.teacherName}>中西 崇文</p>
