@@ -7,7 +7,7 @@ const client = require("contentful").createClient({
 });
 
 const fetchEntries = async () => {
-  // ここに設定する適切な型がわからない
+  // ここの型定義わからなかったから、any
   const entries = await client.getEntries();
   if (entries.items) return entries.items;
 };

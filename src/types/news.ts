@@ -1,9 +1,18 @@
-export type News = {
-    id: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    revisedAt: string;
-    title: string;
-    content: string;
+type News = {
+  newsday: string;
+  newstitle: string;
+  newsoverview: string;
+};
+
+// Postsの型を定義（Newsの配列）
+type Posts = News[];
+
+type NewsFields = {
+  newsday: string;
+  newstitle: string;
+  newsoverview: string;
+};
+
+type NewsContentfulEntry = {
+  fields: NewsFields;
 };
