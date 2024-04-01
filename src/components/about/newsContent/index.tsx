@@ -12,12 +12,7 @@ const NewsContent: React.FC<NewsComponentProps>  = ({newsDay, title, content}) =
   return (
 
   <div className={styles.home__page3__contentful}>
-    <div
-      className={styles.home__page3__contentful__piece}
-    >
-      <div
-        className={styles.home__page3__contentful__piece__day}
-      >
+    <div className={styles.home__page3__contentful__piece}>
         <h2
           className={
             styles.home__page3__contentful__piece__day__detail
@@ -25,12 +20,8 @@ const NewsContent: React.FC<NewsComponentProps>  = ({newsDay, title, content}) =
         >
         {newsDay}
         </h2>
-      </div>
-      <div
-        className={
-          styles.home__page3__contentful__piece__content
-        }
-      >
+
+      <div className={ styles.home__page3__contentful__piece__content }>
         <h2
           className={
             styles.home__page3__contentful__piece__content__title
@@ -38,11 +29,7 @@ const NewsContent: React.FC<NewsComponentProps>  = ({newsDay, title, content}) =
         >
           {title}
         </h2>
-        <p
-          className={
-            styles.home__page3__contentful__piece__content__text
-          }
-        >
+        <p className={styles.home__page3__contentful__piece__content__text}>
           {content}
         </p>
       </div>

@@ -10,57 +10,48 @@
   text-align: center;
   vertical-align: bottom;
   height: 16%;
-  font-size: 90px;
+  font-size: 3rem;
   color: #FFFFFF;
   border-bottom: solid #00ffff 6px;
 }
 
 .home__page3__contentful {
+  margin-top: 2rem;
   color: #FFFFFF;
-  margin: 0;
-  padding: 0% 10% 0% 10%;
+  text-align: center;
   overflow-x: hidden;
   scroll-behavior: smooth;
   position: relative;
-  width: 100%;
 }
 
 .home__page3__contentful__piece {
   display: flex;
-  flex-direction: row;
+  justify-items: center;
   height: 30%;
-  width: 100%;
-  padding-top: 5%;
-}
-
-.home__page3__contentful__piece__day {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 17%;
-  margin-top: 1.5%;
+  margin-top: 3rem;
 }
 
 .home__page3__contentful__piece__day__detail {
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .home__page3__contentful__piece__content {
   display: flex;
   flex-direction: column;
+  /* 左揃えにする */
+  align-items: flex-start;
   height: 100%;
   width: 83%;
-  padding-left:6%;
+  margin-left: 2rem;
 }
 
 .home__page3__contentful__piece__content__title {
-  font-size: 24px;
+  font-size: 1.6rem;
 }
 
 .home__page3__contentful__piece__content__text {
-  font-size: 19px;
-  line-height: 1.2;
+  font-size: 1.3rem;
+
 }
 
 /* レスポンシブデザイン */
