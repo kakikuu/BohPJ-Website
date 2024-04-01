@@ -1,34 +1,29 @@
-import { WorksPosts } from "@/types/works";
+import { FC } from 'react'; // FC (FunctionComponent) タイプをインポート
+import Image from "next/image";
 import styles from "./style.module.css";
 
+// WorksComponentProps 型を再確認します。
 type WorksComponentProps = {
-  posts: WorksPosts[];
+  title: string;
+  content: string;
+  file: any;
 };
 
-const DisplayContents: React.FC<WorksComponentProps> = ({ posts }) => {
+
+const DisplayContent: FC<WorksComponentProps> = ({ title, content, file }) => {
   return (
-    <main>
-      <div className={styles.works__contents}>
-        <h2>Works</h2>
-        {posts.map((p, index) =>
-          p.slidedata ? (
-            <div className={styles.works__set} key={index}>
-              <img
-                // Imageタグの使うのが一般的だが、動的なドメインをconfigの設定するのは難しいため、imgタグを使用する
-                className={styles.works__display}
-                src={`https:${p.slidedata.fields.file.url}`}
-                alt="works image"
-              />
-              <div className={styles.works__text}>
-                <h3>{p.workstitle}</h3>
-                <p>{p.workoverview}</p>
-              </div>
-            </div>
-          ) : null
-        )}
+    <div className={styles.works__contents}>
+      <div className={styles.works__set}>
+          {file && (
+            <Image src={file} alt={title} className={styles.works__display}/>
+          )}
+        <div className={styles.works__text}>
+          <h3>{title}</h3>
+          <p>{content}</p>
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
 
-export default DisplayContents;
+export default DisplayContent;
