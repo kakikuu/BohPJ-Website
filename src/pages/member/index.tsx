@@ -6,7 +6,7 @@ import Header from "../../components/member/header/";
 import TeacherDetails from "../../components/member/teacherDetails/";
 import Footer from "../../components/footer";
 
-import styles from "../../styles/member.module.css";
+import styles from "../../styles/Member.module.css";
 
 interface SectionProps {
   title: string;
