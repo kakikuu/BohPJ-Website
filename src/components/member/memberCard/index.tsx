@@ -1,4 +1,4 @@
-import styles from "./membercard.module.css";
+import styles from "./memberCard.module.css";
 import Image from "next/image";
 import MemberCardProps from "@/types/member";
 

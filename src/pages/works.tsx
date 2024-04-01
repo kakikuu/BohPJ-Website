@@ -1,18 +1,11 @@
 // WorksPage コンポーネント
 import Footer from "../components/footer";
 import Navbar from "../components/navigation";
-import fetchEntries from "../libs/client_entries";
 import DisplayContents from "../components/works/contents/index";
 import WorksHeader from "../components/works/worksHeader/index";
-import { WorksPosts } from "@/types/works";
-import { WorkContentfulEntry } from "@/types/works";
-import { WorkFields } from "@/types/works";
+import img from "../../public/images/background-member-header.png";
 
-type WorksComponentProps = {
-  posts: WorksPosts[];
-};
-
-const WorksPage: React.FC<WorksComponentProps> = ({ posts }) => {
+const WorksPage: React.FC= () => {
   return (
     <div>
       <main>
@@ -33,17 +26,3 @@ const WorksPage: React.FC<WorksComponentProps> = ({ posts }) => {
 };
 
 export default WorksPage;
-
-export async function getStaticProps() {
-  const resEntries = await fetchEntries(); // 投稿されているデータをすべて取得
-
-  const posts = resEntries.map((p: WorkContentfulEntry): WorkFields => {
-    return p.fields;
-  });
-
-  return {
-    props: {
-      posts,
-    },
-  };
-}

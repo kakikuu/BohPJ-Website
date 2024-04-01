@@ -22,7 +22,6 @@
 
 .pagetitle>p {
     font-size: 150px;
-    /* font-weight: bold; */
     font-family: "Roboto Mono", monospace;
 
     position: absolute;
@@ -33,15 +32,11 @@
 }
 
 
-/* DisplayContents.module.css */
 .WorksContens {
     text-align: center;
     display: flex;
-    /* 親要素をフレックスコンテナにする */
     flex-direction: column;
-    /* 縦方向に子要素を配置 */
     align-items: center;
-    /* 子要素を水平方向に中央揃え */
     width: 100%;
 }
 
@@ -69,7 +64,6 @@
     display: grid;
     /* 1列に設定 */
     grid-template-columns: 1fr;
-    /* 行の最小高さを300px、最大高さを自動に設定 */
     grid-auto-rows: minmax(10rem, 20rem);
     gap: 20px;
     width: 100%;
@@ -81,7 +75,6 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    /* justify-content: center; */
     margin-left: 15rem;
 }
 
@@ -93,11 +86,8 @@
 .WorkContentsStyle {
     text-align: center;
     display: flex;
-    /* 親要素をフレックスコンテナにする */
     flex-direction: column;
-    /* 縦方向に子要素を配置 */
     align-items: center;
-    /* 子要素を水平方向に中央揃え */
     justify-content: center;
     margin-bottom: 5rem;
     width: 100%;
