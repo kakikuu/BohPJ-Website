@@ -10,17 +10,12 @@ const about: React.FC = () => {
     <div className={styles.home__allpage}>
       <Navbar></Navbar>
       <main>
-        <section className={styles.home}>
-          <AboutHeader></AboutHeader>
-        </section>
-
-        <section className={styles.home}>
-          <AboutContent></AboutContent>
-        </section>
-
-        <section className={styles.home}>
+        <AboutHeader></AboutHeader>
+        <AboutContent></AboutContent>
         <div className={styles.home__page3}>
-          <h1 className={styles.home__page3__title}>News</h1>
+          <div className={styles.home__page3__position}>
+            <h1 className={styles.home__page3__title}>News</h1>
+          </div>
           <NewsContent
             newsDay="2024/03/20"
             title="アイフルデータハッカソンにて優秀賞を受賞！"
@@ -57,13 +52,9 @@ const about: React.FC = () => {
             content="2023年3月に開催された情報処理学会第85回全国大会において、本クラブ部員の青木慎太郎、浅井悠一郎(当時2年生)が論文を発表し学生奨励賞を受賞しました！情報処理学会は情報分野国内最大の学会で、1000件以上の発表から選出されての受賞となりました！大学広報からもプレスリリースを出して頂きました。"
           ></NewsContent>
         </div>
-        </section>
-
       </main>
       <Footer></Footer>
     </div>
   );
 };
 export default about;
-
-
