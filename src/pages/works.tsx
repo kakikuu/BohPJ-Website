@@ -7,7 +7,7 @@ import WorksHeader from "../components/works/worksHeader/index";
 import slide_abe from "../../public/images/slide_abe.png";
 import slide_aoki from "../../public/images/slide_aoki.png";
 import slide_tono from "../../public/images/slide_tono.png";
-import aihack from "../../public/images/aihack.jpg";
+import aihack from "../../public/images/Slide.png";
 
 const WorksPage: React.FC = () => {
   return (
