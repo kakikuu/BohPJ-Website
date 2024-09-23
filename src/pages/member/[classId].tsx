@@ -9,7 +9,7 @@ import MemberCard from "../../components/member/memberCard/";
 import membersData from "../../data/members";
 import Footer from "../../components/footer/";
 
-import styles from "../../styles/memberDetail.module.css";
+import styles from "../../styles/MemberDetail.module.css";
 
 const MemberDetail: () => JSX.Element = () => {
   const router = useRouter();

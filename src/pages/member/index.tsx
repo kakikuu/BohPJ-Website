@@ -7,7 +7,7 @@ import TeacherDetails from "../../components/member/teacherDetails/";
 import Footer from "../../components/footer";
 import type { SectionProps } from "../../types/member";
 
-import styles from "../../styles/member.module.css";
+import styles from "../../styles/Member.module.css";
 
 export default function Members() {
   const memberYears = [1, 2, 3, 4];
