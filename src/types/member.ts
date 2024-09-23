@@ -1,8 +1,11 @@
-type MemberCardProps = {
+export type MemberCardProps = {
   member: {
     name: string;
     image: string;
   };
 };
 
-export default MemberCardProps;
+export type SectionProps = {
+  title: string;
+  children: React.ReactNode;
+};
