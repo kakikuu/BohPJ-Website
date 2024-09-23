@@ -5,6 +5,7 @@ import Navigation from "../../components/navigation/";
 import Header from "../../components/member/header/";
 import TeacherDetails from "../../components/member/teacherDetails/";
 import Footer from "../../components/footer";
+import type { SectionProps } from "../../types/member";
 
 import styles from "../../styles/member.module.css";
 
@@ -52,7 +53,7 @@ export default function Members() {
   );
 }
 
-function Section({ title, children }) {
+function Section({ title, children }: SectionProps) {
   return (
     <div className={styles.section}>
       <h2 className={styles.sectionTitle}>{title}</h2>

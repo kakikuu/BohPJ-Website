@@ -1,6 +1,6 @@
 import styles from "./membercard.module.css";
 import Image from "next/image";
-import MemberCardProps from "@/types/member";
+import type { MemberCardProps } from "@/types/member";
 
 function MemberCard({ member }: MemberCardProps) {
   return (
